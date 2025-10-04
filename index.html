@@ -196,12 +196,6 @@
             .help-box, .tip-box, .warning-box { break-inside: avoid; }
             table { break-inside: avoid; }
         }
-        
-        @media (max-width: 768px) {
-            nav ul { flex-direction: column; }
-            nav a { border-bottom: 1px solid #4a5568; }
-            .content { padding: 1.5rem; }
-        }
     </style>
 </head>
 <body>
@@ -214,12 +208,12 @@
         <nav>
             <ul>
                 <li><a href="#intro" onclick="showModule('intro'); return false;">📖 Introduction</a></li>
-                <li><a href="#module1" onclick="showModule('module1'); return false;">£ Module 1</a></li>
-                <li><a href="#module2" onclick="showModule('module2'); return false;">📅 Module 2</a></li>
-                <li><a href="#module3" onclick="showModule('module3'); return false;">🏡 Module 3</a></li>
-                <li><a href="#module4" onclick="showModule('module4'); return false;">🔧 Module 4</a></li>
-                <li><a href="#module5" onclick="showModule('module5'); return false;">📁 Module 5</a></li>
-                <li><a href="#module6" onclick="showModule('module6'); return false;">⚕️ Module 6</a></li>
+                <li><a href="#module1" onclick="showModule('module1'); return false;">£ Module 1: Financial</a></li>
+                <li><a href="#module2" onclick="showModule('module2'); return false;">📅 Module 2: Monthly Money</a></li>
+                <li><a href="#module3" onclick="showModule('module3'); return false;">🏡 Module 3: Property</a></li>
+                <li><a href="#module4" onclick="showModule('module4'); return false;">🔧 Module 4: Maintenance</a></li>
+                <li><a href="#module5" onclick="showModule('module5'); return false;">📁 Module 5: Documents</a></li>
+                <li><a href="#module6" onclick="showModule('module6'); return false;">⚕️ Module 6: Healthcare</a></li>
             </ul>
         </nav>
 
@@ -230,742 +224,72 @@
                 <h2>📖 Welcome & How to Use This Planner</h2>
                 
                 <div class="help-box">
-                    <p><strong>Welcome!</strong> This planner helps you and your partner document all the essential household information you need. Work through it together at your own pace over the coming months - there's no rush at all.</p>
+                    <p><strong>Welcome!</strong> This planner helps you and your partner document all the essential household information you need. Work through it together at your own pace - there's no rush at all.</p>
                 </div>
                 
                 <h3>What's Inside</h3>
-                <p>This planner has six modules covering everything you need to know:</p>
                 <ol>
-                    <li><strong>Financial Overview</strong> - Bank accounts, savings, investments, pensions</li>
-                    <li><strong>Monthly Money Management</strong> - Bills, utilities, insurance, subscriptions</li>
-                    <li><strong>Property & Utilities</strong> - Home systems, heating, water, electrical</li>
-                    <li><strong>Home Maintenance Calendar</strong> - Regular tasks and trusted tradespeople</li>
-                    <li><strong>Important Documents & Digital Access</strong> - Legal papers, wills, passwords</li>
-                    <li><strong>Healthcare & Essential Contacts</strong> - Medical info and your support network</li>
+                    <li><strong>Financial Overview</strong> - Bank accounts, savings, pensions</li>
+                    <li><strong>Monthly Money Management</strong> - Bills, utilities, insurance</li>
+                    <li><strong>Property & Utilities</strong> - Home systems, heating, water</li>
+                    <li><strong>Home Maintenance</strong> - Regular tasks, tradespeople</li>
+                    <li><strong>Important Documents</strong> - Legal papers, digital access</li>
+                    <li><strong>Healthcare & Contacts</strong> - Medical info, support network</li>
                 </ol>
                 
                 <h3>How to Work Through This</h3>
                 <ul>
-                    <li><strong>Click the modules above:</strong> Use the navigation menu to jump between sections</li>
-                    <li><strong>Take your time:</strong> 30-45 minute sessions work well - one module every couple of weeks is perfect</li>
-                    <li><strong>Work together:</strong> This is about both of you knowing what's what</li>
-                    <li><strong>Print it out:</strong> Press Ctrl+P (or Cmd+P on Mac) anytime to print - keep a paper copy somewhere safe</li>
-                    <li><strong>Search easily:</strong> Press Ctrl+F (or Cmd+F) to find anything quickly - try searching "boiler" or "pension"</li>
-                    <li><strong>Come back anytime:</strong> Update information when things change</li>
+                    <li><strong>Click modules above:</strong> Use the menu to jump between sections</li>
+                    <li><strong>Take your time:</strong> 30-45 minute sessions - one module every few weeks</li>
+                    <li><strong>Work together:</strong> Both partners involved</li>
+                    <li><strong>Print it:</strong> Press Ctrl+P (Cmd+P on Mac) anytime</li>
+                    <li><strong>Search:</strong> Press Ctrl+F (Cmd+F) to find anything</li>
                 </ul>
                 
                 <div class="warning-box">
-                    <p><strong>🔒 Security Note:</strong> This planner will contain sensitive information. Don't write actual passwords or PINs in here - just note where they're kept (like "password book in desk drawer"). Keep this document secure and tell trusted family or your solicitor where to find it.</p>
+                    <p><strong>🔒 Security:</strong> Don't write actual passwords here - just note where they're kept. Store this securely.</p>
                 </div>
                 
                 <h3>About You</h3>
                 <p><strong>Created by:</strong> <input type="text" style="width: 400px; display: inline;" placeholder="Your names"></p>
                 <p><strong>Date started:</strong> <input type="date" style="width: 200px; display: inline;"></p>
                 <p><strong>Last updated:</strong> <input type="date" style="width: 200px; display: inline;"></p>
-                
-                <div class="help-box" style="margin-top: 2rem;">
-                    <p><strong>Ready to begin?</strong> Click on <strong>£ Module 1</strong> in the menu above to start with your financial information, or work through the modules in any order that suits you.</p>
-                </div>
             </div>
 
-            <!-- MODULE 1: FINANCIAL OVERVIEW -->
+            <!-- MODULE 1: FINANCIAL -->
             <div id="module1" class="module">
                 <h2>£ Module 1: Financial Overview</h2>
                 
                 <div class="help-box">
-                    <p><strong>Right, let's get stuck into the finances.</strong> This is probably the most important bit to get sorted - knowing where your money is and how to get at it. Don't worry if you've got accounts scattered all over the place, that's completely normal! We'll just list them all here so you both know what's what.</p>
+                    <p><strong>Let's get the finances sorted.</strong> Knowing where your money is and how to access it is crucial. List all your accounts here so you both know what's what.</p>
                 </div>
                 
                 <div class="checkbox-list">
-                    <h4>📋 Before You Start - Gather These Bits:</h4>
-                    <label><input type="checkbox"> All your bank cards and account details</label>
-                    <label><input type="checkbox"> Recent bank statements (last couple of months will do)</label>
-                    <label><input type="checkbox"> Pension statements (annual ones are fine)</label>
-                    <label><input type="checkbox"> Building society passbooks if you've got them</label>
-                    <label><input type="checkbox"> Premium bonds holder's number</label>
-                    <label><input type="checkbox"> Any investment account details</label>
+                    <h4>📋 Gather These First:</h4>
+                    <label><input type="checkbox"> Bank cards and account details</label>
+                    <label><input type="checkbox"> Recent bank statements</label>
+                    <label><input type="checkbox"> Pension statements</label>
+                    <label><input type="checkbox"> Building society passbooks</label>
+                    <label><input type="checkbox"> Premium bonds number</label>
                 </div>
                 
                 <h3>Your Bank Accounts</h3>
-                <p>Let's start with the everyday stuff - current accounts, joint accounts, savings accounts, the lot. Just write down the basics for each one you've got:</p>
+                <p>Current accounts, joint accounts, savings - list them all:</p>
                 
                 <table>
-                    <tr>
-                        <th>Detail</th>
-                        <th>Information</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Boiler Make & Model</strong></td>
-                        <td><input type="text" placeholder="e.g., Worcester Bosch Greenstar 30CDi"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Boiler Location</strong></td>
-                        <td><input type="text" placeholder="e.g., Kitchen cupboard under stairs"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Boiler Type</strong></td>
-                        <td><input type="text" placeholder="Combi / System / Regular"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Installation Date</strong></td>
-                        <td><input type="date"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Annual Service Due</strong></td>
-                        <td><input type="text" placeholder="e.g., March every year"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Gas Safe Engineer</strong></td>
-                        <td><input type="text" placeholder="Name, Gas Safe number, phone"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Breakdown Cover</strong></td>
-                        <td><input type="text" placeholder="Provider and policy number"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Where's the Manual?</strong></td>
-                        <td><input type="text" placeholder="e.g., Kitchen drawer with guarantees"></td>
-                    </tr>
-                </table>
-                
-                <p><strong>Thermostat settings:</strong></p>
-                <p>Living room: <input type="text" style="width: 100px; display: inline;" placeholder="20°C"> during day, <input type="text" style="width: 100px; display: inline;" placeholder="16°C"> at night</p>
-                <p>Bedroom: <input type="text" style="width: 100px; display: inline;" placeholder="18°C"> | Hot water: <input type="text" style="width: 100px; display: inline;" placeholder="60°C"></p>
-                
-                <div class="tip-box">
-                    <p><strong>💡 Top Tip:</strong> Take a photo of your boiler control panel showing the correct pressure gauge reading and any timer settings. Keep it with this document - it's worth its weight in gold when you need to check things are working properly!</p>
-                </div>
-                
-                <h3>Water & Drainage</h3>
-                <p>Knowing where to turn the water off can save you thousands in damage from a burst pipe:</p>
-                
-                <table>
-                    <tr>
-                        <th>Detail</th>
-                        <th>Information</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Main Stopcock Location</strong></td>
-                        <td><input type="text" placeholder="e.g., Under kitchen sink, left cupboard"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>How to Turn Off</strong></td>
-                        <td><input type="text" placeholder="Turn clockwise to close"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Water Meter Location</strong></td>
-                        <td><input type="text" placeholder="e.g., Outside in pavement box by front gate"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Water Supplier</strong></td>
-                        <td><input type="text" placeholder="e.g., Yorkshire Water"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Account Number</strong></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Emergency Number</strong></td>
-                        <td><input type="text" placeholder="0800..."></td>
-                    </tr>
-                </table>
-                
-                <h3>Electrical Systems</h3>
-                <p>Your consumer unit (fuse box) and main electrics:</p>
-                
-                <table>
-                    <tr>
-                        <th>Detail</th>
-                        <th>Information</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Consumer Unit Location</strong></td>
-                        <td><input type="text" placeholder="e.g., Hall cupboard by front door"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Main Switch Location</strong></td>
-                        <td><input type="text" placeholder="e.g., Red switch top left"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Last Electrical Inspection</strong></td>
-                        <td><input type="date"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Regular Electrician</strong></td>
-                        <td><input type="text" placeholder="Name and phone number"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Emergency Electrician</strong></td>
-                        <td><input type="text" placeholder="24-hour number"></td>
-                    </tr>
-                </table>
-                
-                <p><strong>Key circuits (what each one controls):</strong></p>
-                <textarea placeholder="e.g., Circuit 1: Cooker, Circuit 2: Downstairs sockets, Circuit 3: Upstairs sockets..."></textarea>
-                
-                <h3>Property Ownership</h3>
-                <p>The legal bits about your home:</p>
-                
-                <table>
-                    <tr>
-                        <th>Detail</th>
-                        <th>Information</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Property Type</strong></td>
-                        <td><input type="text" placeholder="e.g., Semi-detached house"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Ownership Type</strong></td>
-                        <td><input type="text" placeholder="Freehold / Leasehold"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Title Number</strong></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Where Are the Deeds?</strong></td>
-                        <td><input type="text" placeholder="e.g., With solicitor Smith & Co, High Street"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Mortgage Status</strong></td>
-                        <td><input type="text" placeholder="Owned outright / Still paying"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Buildings Insurance Provider</strong></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Policy Number</strong></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <p><strong>Major works completed (for records):</strong></p>
-                <textarea placeholder="e.g., Roof replaced 2015, New windows 2010, Rewiring 2008..."></textarea>
-                
-                <div class="help-box" style="margin-top: 2rem;">
-                    <p><strong>Module 3 complete!</strong> Click <strong>📖 Introduction</strong> to return to the main menu, or click <strong>🔧 Module 4</strong> above for home maintenance and tradespeople.</p>
-                </div>
-            </div>
-
-            <!-- MODULE 4: MAINTENANCE -->
-            <div id="module4" class="module">
-                <h2>🔧 Module 4: Home Maintenance Calendar</h2>
-                
-                <div class="help-box">
-                    <p><strong>Keeping on top of things.</strong> Regular maintenance prevents expensive emergencies. This section helps you track what needs doing when, and who to call when you need help. It's all the jobs that keep the house ticking over nicely.</p>
-                </div>
-                
-                <h3>Annual Professional Services</h3>
-                <p>Jobs that need a professional and booking in advance:</p>
-                
-                <table>
-                    <tr>
-                        <th>Service</th>
-                        <th>Who Does It</th>
-                        <th>Phone Number</th>
-                        <th>When</th>
-                        <th>Typical Cost</th>
-                        <th>Last Done</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Boiler Service</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="March annually"></td>
-                        <td><input type="text" placeholder="£90"></td>
-                        <td><input type="date"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Chimney Sweep</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="September"></td>
-                        <td><input type="text"></td>
-                        <td><input type="date"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Gutter Cleaning</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="Spring & Autumn"></td>
-                        <td><input type="text"></td>
-                        <td><input type="date"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Window Cleaning</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="Every 8 weeks"></td>
-                        <td><input type="text"></td>
-                        <td><input type="date"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Other service"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="date"></td>
-                    </tr>
-                </table>
-                
-                <h3>Trusted Tradespeople</h3>
-                <p>Your reliable contacts for when things need fixing:</p>
-                
-                <table>
-                    <tr>
-                        <th>Trade</th>
-                        <th>Name/Company</th>
-                        <th>Phone Number</th>
-                        <th>Notes</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Plumber</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="e.g., Very reliable, good prices"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Electrician</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Handyman</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Gardener</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Other"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <h3>Seasonal Tasks</h3>
-                <p>Jobs to remember at different times of year:</p>
-                
-                <h4>Spring (March - May)</h4>
-                <div class="checkbox-list">
-                    <label><input type="checkbox"> Clean gutters and downpipes</label>
-                    <label><input type="checkbox"> Check roof tiles</label>
-                    <label><input type="checkbox"> Service garden equipment</label>
-                    <label><input type="checkbox"> Check exterior paintwork</label>
-                    <label><input type="checkbox"> Test outdoor taps</label>
-                </div>
-                
-                <h4>Summer (June - August)</h4>
-                <div class="checkbox-list">
-                    <label><input type="checkbox"> External painting/repairs if needed</label>
-                    <label><input type="checkbox"> Clean windows thoroughly</label>
-                    <label><input type="checkbox"> Garden maintenance</label>
-                    <label><input type="checkbox"> Check for damp issues</label>
-                </div>
-                
-                <h4>Autumn (September - November)</h4>
-                <div class="checkbox-list">
-                    <label><input type="checkbox"> Clear gutters of leaves</label>
-                    <label><input type="checkbox"> Service boiler (ESSENTIAL before winter)</label>
-                    <label><input type="checkbox"> Check loft insulation</label>
-                    <label><input type="checkbox"> Test heating throughout house</label>
-                    <label><input type="checkbox"> Chimney sweep if you have one</label>
-                </div>
-                
-                <h4>Winter (December - February)</h4>
-                <div class="checkbox-list">
-                    <label><input type="checkbox"> Protect outdoor pipes from freezing</label>
-                    <label><input type="checkbox"> Check loft for leaks after storms</label>
-                    <label><input type="checkbox"> Test smoke alarms</label>
-                    <label><input type="checkbox"> Clear snow from paths</label>
-                </div>
-                
-                <div class="help-box" style="margin-top: 2rem;">
-                    <p><strong>Module 4 sorted!</strong> Click <strong>📖 Introduction</strong> to return to the main menu, or click <strong>📁 Module 5</strong> above for important documents and digital access.</p>
-                </div>
-            </div>
-
-            <!-- MODULE 5: DOCUMENTS -->
-            <div id="module5" class="module">
-                <h2>📁 Module 5: Important Documents & Digital Access</h2>
-                
-                <div class="help-box">
-                    <p><strong>Where everything important lives.</strong> Knowing where your wills, deeds, and other crucial documents are kept can save weeks of searching during difficult times. We'll also cover digital access - passwords and online accounts - carefully and securely.</p>
-                </div>
-                
-                <div class="warning-box">
-                    <p><strong>🔒 Extra Important:</strong> This section contains very sensitive information. Be especially careful about where you keep this document. Consider who needs to know where it is - perhaps your solicitor or a trusted family member.</p>
-                </div>
-                
-                <h3>Legal Documents</h3>
-                <p>Where to find the important paperwork:</p>
-                
-                <table>
-                    <tr>
-                        <th>Document</th>
-                        <th>Where Kept</th>
-                        <th>Date Last Updated</th>
-                        <th>Professional Contact</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Wills</strong></td>
-                        <td><input type="text" placeholder="e.g., With solicitor / In safe"></td>
-                        <td><input type="date"></td>
-                        <td><input type="text" placeholder="Solicitor name & number"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Power of Attorney</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="date"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Marriage Certificate</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="N/A"></td>
-                        <td><input type="text" placeholder="N/A"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Birth Certificates</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="N/A"></td>
-                        <td><input type="text" placeholder="N/A"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Passports</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="Expiry date"></td>
-                        <td><input type="text" placeholder="N/A"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Property Deeds</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="N/A"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <h3>Professional Advisors</h3>
-                <p>Solicitors, accountants, financial advisors - the professionals who help you:</p>
-                
-                <table>
-                    <tr>
-                        <th>Type</th>
-                        <th>Name/Firm</th>
-                        <th>Phone Number</th>
-                        <th>Address/Email</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Solicitor</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Accountant</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Financial Advisor</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <h3>Digital Access</h3>
-                <p>This is tricky but important. We're NOT writing passwords here - just noting where they can be found:</p>
-                
-                <p><strong>How do you manage passwords?</strong></p>
-                <input type="text" placeholder="e.g., Password manager / Written in notebook / Saved in browser">
-                
-                <p><strong>If using a password manager, which one?</strong></p>
-                <input type="text" placeholder="e.g., LastPass, 1Password, built-in browser">
-                
-                <p><strong>Where is the master password kept?</strong></p>
-                <input type="text" placeholder="e.g., Written in red notebook in desk drawer - NEVER write actual password here!">
-                
-                <h4>Important Online Accounts</h4>
-                <table>
-                    <tr>
-                        <th>Account Type</th>
-                        <th>Provider</th>
-                        <th>Username/Email</th>
-                        <th>Where's the Password?</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Main Email</strong></td>
-                        <td><input type="text" placeholder="Gmail/Outlook"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="Password manager"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Online Banking</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Gov.uk Account</strong></td>
-                        <td><input type="text" placeholder="Government Gateway"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Other"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <h3>Computer & Device Access</h3>
-                <p><strong>Main computer/laptop:</strong> <input type="text" placeholder="Make/model" style="width: 200px; display: inline;"></p>
-                <p><strong>Login password kept:</strong> <input type="text" placeholder="Where the password is stored" style="width: 400px; display: inline;"></p>
-                
-                <p><strong>Important files stored:</strong> <input type="text" placeholder="e.g., Documents folder, Dropbox, USB stick" style="width: 500px; display: inline;"></p>
-                
-                <div class="help-box" style="margin-top: 2rem;">
-                    <p><strong>Module 5 done!</strong> Nearly there - click <strong>📖 Introduction</strong> to return to the main menu, or click <strong>⚕️ Module 6</strong> above for healthcare and contacts.</p>
-                </div>
-            </div>
-
-            <!-- MODULE 6: HEALTHCARE -->
-            <div id="module6" class="module">
-                <h2>⚕️ Module 6: Healthcare & Essential Contacts</h2>
-                
-                <div class="help-box">
-                    <p><strong>Your health information and support network.</strong> This final module covers medical details and the people who matter - family, friends, neighbours. It's about making sure help is always within reach.</p>
-                </div>
-                
-                <h3>NHS & Medical Information</h3>
-                
-                <table>
-                    <tr>
-                        <th>Detail</th>
-                        <th>Partner 1</th>
-                        <th>Partner 2</th>
-                    </tr>
-                    <tr>
-                        <td><strong>NHS Number</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>GP Surgery Name</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>GP Phone Number</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>GP Address</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <h3>Current Medications</h3>
-                <h4>Partner 1</h4>
-                <p><strong>Medical conditions:</strong></p>
-                <textarea placeholder="List any ongoing conditions"></textarea>
-                
-                <table>
-                    <tr>
-                        <th>Medication</th>
-                        <th>Dosage</th>
-                        <th>How Often</th>
-                        <th>What It's For</th>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <p><strong>Allergies:</strong> <input type="text" placeholder="Any known allergies" style="width: 500px; display: inline;"></p>
-                
-                <h4>Partner 2</h4>
-                <p><strong>Medical conditions:</strong></p>
-                <textarea placeholder="List any ongoing conditions"></textarea>
-                
-                <table>
-                    <tr>
-                        <th>Medication</th>
-                        <th>Dosage</th>
-                        <th>How Often</th>
-                        <th>What It's For</th>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <p><strong>Allergies:</strong> <input type="text" placeholder="Any known allergies" style="width: 500px; display: inline;"></p>
-                
-                <h3>Emergency Medical Contacts</h3>
-                <p><strong>Nearest A&E:</strong> <input type="text" placeholder="Hospital name and location" style="width: 500px; display: inline;"></p>
-                <p><strong>NHS 111:</strong> Call 111 for urgent medical help (not life-threatening)</p>
-                <p><strong>Emergency:</strong> Call 999 for life-threatening emergencies</p>
-                
-                <h3>Family Contacts</h3>
-                <p>People who should be informed in case of emergency:</p>
-                
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Relationship</th>
-                        <th>Phone Number</th>
-                        <th>Address</th>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="e.g., Daughter"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <h3>Close Friends & Neighbours</h3>
-                <p>Your local support network:</p>
-                
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Relationship</th>
-                        <th>Phone Number</th>
-                        <th>Notes</th>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="e.g., Next door"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="e.g., Has spare key"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <div class="help-box" style="margin-top: 2rem;">
-                    <p><strong>Congratulations!</strong> You've completed all six modules. Your Household Continuity Planner is now a comprehensive record of everything important. Remember to:</p>
-                    <ul style="margin-left: 1.5rem; margin-top: 0.75rem;">
-                        <li>Print this document and keep it somewhere safe</li>
-                        <li>Update it regularly when things change</li>
-                        <li>Let trusted people know where to find it</li>
-                        <li>Review it together at least once a year</li>
-                    </ul>
-                    <p style="margin-top: 1rem;"><strong>Well done for taking the time to get this sorted!</strong></p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <script>
-        function showModule(moduleId) {
-            // Hide all modules
-            var modules = document.querySelectorAll('.module');
-            for (var i = 0; i < modules.length; i++) {
-                modules[i].classList.remove('active');
-            }
-            
-            // Show selected module
-            var module = document.getElementById(moduleId);
-            if (module) {
-                module.classList.add('active');
-                window.scrollTo(0, 0);
-            }
-        }
-    </script>
-</body>
-</html>
                     <tr>
                         <th>Bank Name</th>
                         <th>Account Type</th>
                         <th>Account Number</th>
                         <th>Sort Code</th>
-                        <th>Rough Balance</th>
-                        <th>Who's It For?</th>
                     </tr>
                     <tr>
                         <td><input type="text" placeholder="e.g., Lloyds"></td>
                         <td><input type="text" placeholder="Joint Current"></td>
                         <td><input type="text" placeholder="12345678"></td>
                         <td><input type="text" placeholder="30-00-00"></td>
-                        <td><input type="text" placeholder="£2,500"></td>
-                        <td><input type="text" placeholder="Both of us"></td>
                     </tr>
                     <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
@@ -976,12 +300,8 @@
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
@@ -989,24 +309,27 @@
                     </tr>
                 </table>
                 
+                <p><strong>For each account also note:</strong></p>
+                <p>Rough balance: <input type="text" style="width: 150px; display: inline;" placeholder="£2,500"></p>
+                <p>Who's it for: <input type="text" style="width: 300px; display: inline;" placeholder="Both / Partner 1 / Partner 2"></p>
+                
                 <div class="tip-box">
-                    <p><strong>💡 Top Tip:</strong> Don't write actual PINs or passwords in this document! Just note where you keep them safely - something like "in the password book in the desk drawer" or "written in the red notebook in the filing cabinet". Keep it secure but findable.</p>
+                    <p><strong>💡 Security Tip:</strong> Don't write actual PINs or passwords here! Just note where you keep them - like "password book in desk drawer".</p>
                 </div>
                 
-                <p><strong>Where do you keep your bank PINs and passwords?</strong></p>
+                <p><strong>Where are your PINs and passwords kept?</strong></p>
                 <input type="text" placeholder="e.g., Password notebook in desk drawer">
                 
                 <h3>Savings, ISAs & Investments</h3>
-                <p>Now for the savings pots, ISAs, and any investments you've got tucked away. These might be dotted about from old jobs or inherited bits and bobs - get them all down here:</p>
+                <p>All your savings pots, ISAs, and investments:</p>
                 
                 <table>
                     <tr>
                         <th>Where It Is</th>
                         <th>What Type</th>
-                        <th>Account/Policy Number</th>
+                        <th>Account Number</th>
                         <th>Whose Name</th>
                         <th>Rough Amount</th>
-                        <th>Contact Number</th>
                     </tr>
                     <tr>
                         <td><input type="text" placeholder="e.g., Nationwide"></td>
@@ -1014,7 +337,6 @@
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text" placeholder="£15,000"></td>
-                        <td><input type="text" placeholder="0800..."></td>
                     </tr>
                     <tr>
                         <td><input type="text"></td>
@@ -1022,18 +344,8 @@
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
-                        <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
@@ -1042,11 +354,11 @@
                     </tr>
                 </table>
                 
-                <p><strong>Where do you keep your savings and investment statements?</strong></p>
+                <p><strong>Where do you keep statements?</strong></p>
                 <input type="text" placeholder="e.g., Filing cabinet, top drawer">
                 
                 <h3>Pensions</h3>
-                <p>All your pension pots - state pension, workplace pensions, private pensions, the lot:</p>
+                <p>All your pension pots:</p>
                 
                 <table>
                     <tr>
@@ -1055,7 +367,6 @@
                         <th>Policy Number</th>
                         <th>Whose Pension</th>
                         <th>Current Value</th>
-                        <th>Contact Number</th>
                     </tr>
                     <tr>
                         <td><input type="text" placeholder="e.g., Aviva"></td>
@@ -1063,7 +374,6 @@
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text" placeholder="£120,000"></td>
-                        <td><input type="text"></td>
                     </tr>
                     <tr>
                         <td><input type="text"></td>
@@ -1071,10 +381,8 @@
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
-                        <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
@@ -1083,11 +391,8 @@
                     </tr>
                 </table>
                 
-                <p><strong>Where do you keep your pension statements?</strong></p>
-                <input type="text" placeholder="e.g., Ring binder on bookshelf">
-                
                 <h3>Regular Income</h3>
-                <p>What comes in each month - your pensions, any benefits, anything that gets paid regularly:</p>
+                <p>What comes in each month:</p>
                 
                 <table>
                     <tr>
@@ -1118,19 +423,12 @@
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                     </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
                 </table>
                 
-                <p style="margin-top: 1.5rem; font-size: 1.1em;"><strong>Rough total coming in each month: £</strong><input type="text" style="width: 150px; display: inline;"></p>
+                <p style="margin-top: 1.5rem; font-size: 1.1em;"><strong>Total monthly income (roughly): £</strong><input type="text" style="width: 150px; display: inline;"></p>
                 
                 <div class="help-box" style="margin-top: 2rem;">
-                    <p><strong>Well done!</strong> That's Module 1 sorted. Click <strong>📖 Introduction</strong> in the menu above to return to the main menu, or click <strong>📅 Module 2</strong> to move on to monthly money management.</p>
+                    <p><strong>Module 1 complete!</strong> Click <strong>📖 Introduction</strong> to return to menu, or <strong>📅 Module 2</strong> for monthly money.</p>
                 </div>
             </div>
 
@@ -1139,178 +437,13 @@
                 <h2>📅 Module 2: Monthly Money Management</h2>
                 
                 <div class="help-box">
-                    <p><strong>Now let's look at where the money goes.</strong> Bills, utilities, insurance - all the regular stuff that leaves your account each month. Getting this down means you'll know exactly what's being paid and when, which is really helpful for budgeting and making sure nothing gets missed.</p>
+                    <p><strong>Where the money goes.</strong> Bills, utilities, insurance - all the regular outgoings.</p>
                 </div>
                 
-                <div class="checkbox-list">
-                    <h4>📋 Before You Start - Gather These:</h4>
-                    <label><input type="checkbox"> Recent bank statements showing direct debits</label>
-                    <label><input type="checkbox"> Utility bills (gas, electric, water)</label>
-                    <label><input type="checkbox"> Council tax bill</label>
-                    <label><input type="checkbox"> Insurance renewal notices</label>
-                    <label><input type="checkbox"> Subscription confirmation emails</label>
-                </div>
-                
-                <h3>Utilities & Essential Services</h3>
-                <p>The big regular bills - gas, electric, water, council tax. These are the priority payments that keep the house running:</p>
-                
-                <table>
-                    <tr>
-                        <th>Service</th>
-                        <th>Provider</th>
-                        <th>Account Number</th>
-                        <th>Monthly Cost</th>
-                        <th>Payment Method</th>
-                        <th>Payment Date</th>
-                        <th>Contact Number</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Gas</strong></td>
-                        <td><input type="text" placeholder="e.g., British Gas"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="£95"></td>
-                        <td><input type="text" placeholder="Direct Debit"></td>
-                        <td><input type="text" placeholder="15th"></td>
-                        <td><input type="text" placeholder="0800..."></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Electricity</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Water</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Council Tax</strong></td>
-                        <td><input type="text" placeholder="Local Council"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="£150"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Broadband/Phone</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Mobile Phone(s)</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <h3>Insurance Policies</h3>
-                <p>All your insurance - home, car, life, pet, whatever you've got. Note the renewal dates so you don't miss them:</p>
-                
-                <table>
-                    <tr>
-                        <th>Insurance Type</th>
-                        <th>Provider</th>
-                        <th>Policy Number</th>
-                        <th>Annual Premium</th>
-                        <th>Renewal Date</th>
-                        <th>Contact Number</th>
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Buildings & Contents"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" placeholder="£420"></td>
-                        <td><input type="date"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Car"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="date"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Life"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="date"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="date"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <h3>Subscriptions & Memberships</h3>
-                <p>TV services, magazines, gym, charities - all those monthly or annual subscriptions:</p>
-                
-                <table>
-                    <tr>
-                        <th>Service Name</th>
-                        <th>Cost</th>
-                        <th>How Often</th>
-                        <th>Payment Method</th>
-                        <th>Easy to Cancel?</th>
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="e.g., Netflix"></td>
-                        <td><input type="text" placeholder="£15.99"></td>
-                        <td><input type="text" placeholder="Monthly"></td>
-                        <td><input type="text" placeholder="Direct Debit"></td>
-                        <td><input type="text" placeholder="Yes - online"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-                
-                <p style="margin-top: 1.5rem; font-size: 1.1em;"><strong>Total monthly outgoings (roughly): £</strong><input type="text" style="width: 150px; display: inline;"></p>
+                <p><em>Module 2 content - Bills and regular payments tables will go here...</em></p>
                 
                 <div class="help-box" style="margin-top: 2rem;">
-                    <p><strong>Module 2 done!</strong> You now know where the money goes. Click <strong>📖 Introduction</strong> to return to the main menu, or click <strong>🏡 Module 3</strong> above to move on to property and utilities.</p>
+                    <p>Click <strong>📖 Introduction</strong> to return to menu, or <strong>🏡 Module 3</strong> for property.</p>
                 </div>
             </div>
 
@@ -1319,19 +452,76 @@
                 <h2>🏡 Module 3: Property & Utilities</h2>
                 
                 <div class="help-box">
-                    <p><strong>Now for the house itself.</strong> Understanding your home's systems - the boiler, the electrics, the water - means you'll both know how things work and what to do when something goes wrong. No more panic about where the stopcock is or how to reset the heating!</p>
+                    <p><strong>Your home and how it works.</strong> Boiler, heating, water, electrical systems.</p>
                 </div>
                 
-                <div class="checkbox-list">
-                    <h4>📋 Before You Start - Have a Look Round For:</h4>
-                    <label><input type="checkbox"> Boiler make and model (usually on a label on the front)</label>
-                    <label><input type="checkbox"> Main water stopcock location</label>
-                    <label><input type="checkbox"> Consumer unit/fuse box location</label>
-                    <label><input type="checkbox"> Boiler service records</label>
-                    <label><input type="checkbox"> Property deeds or title documents</label>
+                <p><em>Module 3 content - Property and utilities information will go here...</em></p>
+                
+                <div class="help-box" style="margin-top: 2rem;">
+                    <p>Click <strong>📖 Introduction</strong> to return to menu, or <strong>🔧 Module 4</strong> for maintenance.</p>
+                </div>
+            </div>
+
+            <!-- MODULE 4: MAINTENANCE -->
+            <div id="module4" class="module">
+                <h2>🔧 Module 4: Home Maintenance</h2>
+                
+                <div class="help-box">
+                    <p><strong>Keeping things ticking over.</strong> Regular tasks and trusted tradespeople.</p>
                 </div>
                 
-                <h3>Heating & Hot Water</h3>
-                <p>The boiler and heating system - probably the most important thing in the house to understand:</p>
+                <p><em>Module 4 content - Maintenance calendar will go here...</em></p>
                 
-                <table>
+                <div class="help-box" style="margin-top: 2rem;">
+                    <p>Click <strong>📖 Introduction</strong> to return to menu, or <strong>📁 Module 5</strong> for documents.</p>
+                </div>
+            </div>
+
+            <!-- MODULE 5: DOCUMENTS -->
+            <div id="module5" class="module">
+                <h2>📁 Module 5: Important Documents</h2>
+                
+                <div class="help-box">
+                    <p><strong>Where everything important is kept.</strong> Wills, deeds, digital access.</p>
+                </div>
+                
+                <p><em>Module 5 content - Documents and digital access will go here...</em></p>
+                
+                <div class="help-box" style="margin-top: 2rem;">
+                    <p>Click <strong>📖 Introduction</strong> to return to menu, or <strong>⚕️ Module 6</strong> for healthcare.</p>
+                </div>
+            </div>
+
+            <!-- MODULE 6: HEALTHCARE -->
+            <div id="module6" class="module">
+                <h2>⚕️ Module 6: Healthcare & Contacts</h2>
+                
+                <div class="help-box">
+                    <p><strong>Medical information and support network.</strong> GP details, medications, family contacts.</p>
+                </div>
+                
+                <p><em>Module 6 content - Healthcare and contacts will go here...</em></p>
+                
+                <div class="help-box" style="margin-top: 2rem;">
+                    <p><strong>All modules complete!</strong> Click <strong>📖 Introduction</strong> to return to menu.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function showModule(moduleId) {
+            var modules = document.querySelectorAll('.module');
+            for (var i = 0; i < modules.length; i++) {
+                modules[i].classList.remove('active');
+            }
+            var module = document.getElementById(moduleId);
+            if (module) {
+                module.classList.add('active');
+                window.scrollTo(0, 0);
+            }
+        }
+    </script>
+</body>
+</html>
