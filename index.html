@@ -144,8 +144,6 @@
                     <p><strong>Module 5 complete!</strong> Click <a href="#intro" onclick="showModule('intro'); return false;" style="color: #2c5282; text-decoration: underline; cursor: pointer;">📖 Introduction</a> to return to menu, or <a href="#module6" onclick="showModule('module6'); return false;" style="color: #2c5282; text-decoration: underline; cursor: pointer;">⚕️ Module 6</a> for healthcare.</p>
                 </div>
             </div>
-
-            <!-- MODULE 6: HEALTHCARE -->
             <div id="module6" class="module">
                 <h2>⚕️ Module 6: Healthcare & Contacts</h2>
                 
@@ -345,15 +343,29 @@
 
     <script>
         function showModule(moduleId) {
+            // First scroll to very top
+            window.scrollTo(0, 0);
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            
+            // Hide all modules
             var modules = document.querySelectorAll('.module');
             for (var i = 0; i < modules.length; i++) {
                 modules[i].classList.remove('active');
             }
+            
+            // Show selected module
             var module = document.getElementById(moduleId);
             if (module) {
                 module.classList.add('active');
-                window.scrollTo(0, 0);
             }
+            
+            // Scroll to top again after showing module
+            setTimeout(function() {
+                window.scrollTo(0, 0);
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }, 50);
         }
     </script>
 </body>
