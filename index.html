@@ -394,6 +394,8 @@
         nav {
             background: #e8f4f8;
             padding: 0;
+            position: sticky;
+            top: 0;
             z-index: 100;
             border-bottom: 2px solid #3182ce;
         }
@@ -838,7 +840,7 @@
                 <p style="margin-top: 1.5rem; font-size: 1.1em;"><strong>Total monthly income (roughly): £</strong><input type="text" style="width: 150px; display: inline;"></p>
                 
                 <div class="help-box" style="margin-top: 2rem;">
-                    <p><strong>Module 1 complete!</strong> Click <strong>📖 Introduction</strong> to return to menu, or <strong>📅 Module 2</strong> for monthly money.</p>
+                    <p><strong>Module 1 complete!</strong> Click <a href="#intro" onclick="showModule('intro'); return false;" style="color: #2c5282; text-decoration: underline; cursor: pointer;">📖 Introduction</a> to return to menu, or <a href="#module2" onclick="showModule('module2'); return false;" style="color: #2c5282; text-decoration: underline; cursor: pointer;">📅 Module 2</a> for monthly money.</p>
                 </div>
             </div>
 
@@ -994,7 +996,7 @@
                 <p style="margin-top: 1.5rem;"><strong>Total monthly outgoings (roughly): £</strong><input type="text" style="width: 150px; display: inline;"></p>
                 
                 <div class="help-box" style="margin-top: 2rem;">
-                    <p><strong>Module 2 complete!</strong> Click <strong>📖 Introduction</strong> to return to menu, or <strong>🏡 Module 3</strong> for property.</p>
+                    <p><strong>Module 2 complete!</strong> Click <a href="#intro" onclick="showModule('intro'); return false;" style="color: #2c5282; text-decoration: underline; cursor: pointer;">📖 Introduction</a> to return to menu, or <a href="#module3" onclick="showModule('module3'); return false;" style="color: #2c5282; text-decoration: underline; cursor: pointer;">🏡 Module 3</a> for property.</p>
                 </div>
             </div>
 
@@ -1154,7 +1156,7 @@
                 <textarea placeholder="e.g., Roof replaced 2015, New windows 2010, Rewiring 2008..."></textarea>
                 
                 <div class="help-box" style="margin-top: 2rem;">
-                    <p><strong>Module 3 complete!</strong> Click <strong>📖 Introduction</strong> to return to menu, or <strong>🔧 Module 4</strong> for maintenance.</p>
+                    <p><strong>Module 3 complete!</strong> Click <a href="#intro" onclick="showModule('intro'); return false;" style="color: #2c5282; text-decoration: underline; cursor: pointer;">📖 Introduction</a> to return to menu, or <a href="#module4" onclick="showModule('module4'); return false;" style="color: #2c5282; text-decoration: underline; cursor: pointer;">🔧 Module 4</a> for maintenance.</p>
                 </div>
             </div>
 
@@ -1292,7 +1294,7 @@
                 </div>
                 
                 <div class="help-box" style="margin-top: 2rem;">
-                    <p><strong>Module 4 complete!</strong> Click <strong>📖 Introduction</strong> to return to menu, or <strong>📁 Module 5</strong> for documents.</p>
+                    <p><strong>Module 4 complete!</strong> Click <a href="#intro" onclick="showModule('intro'); return false;" style="color: #2c5282; text-decoration: underline; cursor: pointer;">📖 Introduction</a> to return to menu, or <a href="#module5" onclick="showModule('module5'); return false;" style="color: #2c5282; text-decoration: underline; cursor: pointer;">📁 Module 5</a> for documents.</p>
                 </div>
             </div>
 
